@@ -1,4 +1,21 @@
-void writeLeds(int leds) {
+/**********************************************************
+ *  
+ * Author: coon
+ * Last maintained: 29th March 2017
+ * 
+ * Description: Controls the LEDs and the switches of the 
+ *              HE1-Terminal of c-base.
+ *
+ * TODO: - Solder remaining LEDs
+ *       - Connect the switches
+ *       - Find out how the second rotary switch works
+ *       - MQTT implementation
+ * 
+ **********************************************************/
+
+const int numLeds = 2; // Number of LEDs which are currently soldered.
+
+void setLeds(int leds) {
   digitalWrite(PK_0, leds & (1 << 0));
   digitalWrite(PK_1, leds & (1 << 1));
   digitalWrite(PK_2, leds & (1 << 2));
@@ -23,8 +40,8 @@ void setup() {
 }
 
 void loop() {
-  for(int i = 0; i < 4; ++i) {
-    writeLeds(i);
+  for(int i = 0; i < (1 << numLeds); ++i) {
+    setLeds(i);
     delay(1000);
   }
 }
