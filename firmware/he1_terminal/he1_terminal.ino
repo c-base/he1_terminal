@@ -1,18 +1,42 @@
-/**********************************************************
- *  
- * Author: coon
- * Last maintained: 01. April 2017
- * 
- * Description: Controls the LEDs and the switches of the 
- *              HE1-Terminal of c-base.
- *
- * TODO: - Connect the switches
- *       - Find out how the second rotary switch works
- *       - MQTT implementation
- * 
- **********************************************************/
+/***********************************************************
+ *                                                         *
+ * Author: coon                                            *
+ * Last maintained: 01. April 2017                         *
+ *                                                         *
+ * Description: Controls the LEDs and the switches of the  *
+ *              HE1-Terminal of c-base.                    *
+ *                                                         *
+ * TODO: - Finish MQTT implementation                      *
+ *       - Connect the switches                            *
+ *       - Find out how the second rotary switch works     *
+ *                                                         *
+ ***********************************************************/
 
-const int numLeds = 9; // Number of LEDs which are currently soldered.
+#include <SPI.h>
+#include <Ethernet.h>
+#include <PubSubClient.h>
+
+const int numLeds = 9;
+
+enum State {
+  OFF = 0,
+  ON  = 1
+};
+
+void setLed(int ledNo, int state) {
+  int port = ledNo < 8 ? PK_0 : PQ_0;
+  int ledIdOfPort = ledNo % 8;
+  
+  switch(state) {
+    case ON:
+      digitalWrite(port + ledIdOfPort, HIGH);
+      break;
+
+    case OFF:
+      digitalWrite(port + ledIdOfPort, LOW);
+      break;
+  }
+}
   
 void setLeds(uint32_t leds) {
   auto ledIsSet = [](int leds, int ledNo) -> int {
@@ -32,6 +56,10 @@ void setLeds(uint32_t leds) {
 
 void setup() {
   Serial.begin(115200);
+  Ethernet.begin(0);
+
+  Serial.print("My IP address: ");
+  Serial.println(Ethernet.localIP());
   
   pinMode(PK_0, OUTPUT);
   pinMode(PK_1, OUTPUT);
@@ -44,12 +72,50 @@ void setup() {
   pinMode(PQ_0, OUTPUT);
 }
 
+// MQTT
+char* pServer = "iot.eclipse.org";
+
+void onLedStateChange(int ledNo, int state) {  
+  setLed(ledNo, state);
+} 
+
+void callback(char* pTopic, byte* pPayload, unsigned int length) {
+  if(strcmp(pTopic, "c-base/he1_terminal") == 0) {
+    
+  }
+}
+
+EthernetClient ethClient;
+PubSubClient client(pServer, 1883, callback, ethClient);
+
+void processMqtt() {
+  if (!client.connected()) {
+    Serial.println("Disconnected. Reconnecting....");
+
+    if(!client.connect("he1_terminal_c-base"))
+      Serial.println("Connection failed");
+    else {
+      Serial.println("Connection success");
+      if(client.subscribe("c-base/#")) {
+        Serial.println("Subscription successfull");
+      
+      }
+    }
+  }
+ 
+  client.poll();
+  // delay(1000);
+}
+
+// end of MQTT
+
 void loop() {  
   for(int i = 0; i < (1 << numLeds); ++i) {
+    processMqtt();
     setLeds(i);
-    delay(125);
-
+   
     Serial.println(i);
+    delay(125);
   }
 }
 
