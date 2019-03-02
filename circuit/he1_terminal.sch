@@ -1,35 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+EESchema Schematic File Version 4
 LIBS:he1_terminal-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -44,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L +9V #PWR2
+L power:+9V #PWR2
 U 1 1 58D791F1
 P 1200 4050
 F 0 "#PWR2" H 1200 3900 50  0001 C CNN
@@ -55,7 +26,7 @@ F 3 "" H 1200 4050 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR5
+L power:+5V #PWR5
 U 1 1 58D79227
 P 2000 4000
 F 0 "#PWR5" H 2000 3850 50  0001 C CNN
@@ -66,7 +37,7 @@ F 3 "" H 2000 4000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR8
+L power:GND #PWR8
 U 1 1 58D792C3
 P 2900 4000
 F 0 "#PWR8" H 2900 3750 50  0001 C CNN
@@ -77,7 +48,7 @@ F 3 "" H 2900 4000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG3
+L power:PWR_FLAG #FLG3
 U 1 1 58D79607
 P 2900 4000
 F 0 "#FLG3" H 2900 4095 50  0001 C CNN
@@ -88,7 +59,7 @@ F 3 "" H 2900 4000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG1
+L power:PWR_FLAG #FLG1
 U 1 1 58D7963B
 P 1600 4000
 F 0 "#FLG1" H 1600 4095 50  0001 C CNN
@@ -99,7 +70,7 @@ F 3 "" H 1600 4000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG2
+L power:PWR_FLAG #FLG2
 U 1 1 58D7966D
 P 2400 4000
 F 0 "#FLG2" H 2400 4095 50  0001 C CNN
@@ -110,7 +81,7 @@ F 3 "" H 2400 4000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DB25 J1
+L he1_terminal-rescue:DB25 J1
 U 1 1 58D79A54
 P 5150 4700
 F 0 "J1" H 5200 6050 50  0000 C CNN
@@ -121,7 +92,7 @@ F 3 "" H 5150 4700 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR15
+L power:GND #PWR15
 U 1 1 58D7A1BB
 P 4900 3600
 F 0 "#PWR15" H 4900 3350 50  0001 C CNN
@@ -144,7 +115,7 @@ Wire Wire Line
 Wire Wire Line
 	2400 4200 2400 4000
 $Comp
-L Q_NPN_CBE Q1
+L he1_terminal-rescue:Q_NPN_CBE Q1
 U 1 1 58E3F007
 P 1650 2150
 F 0 "Q1" H 1850 2200 50  0000 L CNN
@@ -155,7 +126,7 @@ F 3 "" H 1650 2150 50  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L +9V #PWR1
+L power:+9V #PWR1
 U 1 1 58E3F00D
 P 1100 1950
 F 0 "#PWR1" H 1100 1800 50  0001 C CNN
@@ -166,7 +137,7 @@ F 3 "" H 1100 1950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L he1_terminal-rescue:R R1
 U 1 1 58E3F013
 P 1450 1100
 F 0 "R1" V 1530 1100 50  0000 C CNN
@@ -177,7 +148,7 @@ F 3 "" H 1450 1100 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR3
+L power:+5V #PWR3
 U 1 1 58E3F019
 P 1450 850
 F 0 "#PWR3" H 1450 700 50  0001 C CNN
@@ -188,7 +159,7 @@ F 3 "" H 1450 850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR4
+L power:GND #PWR4
 U 1 1 58E3F01F
 P 1950 1500
 F 0 "#PWR4" H 1950 1250 50  0001 C CNN
@@ -199,7 +170,7 @@ F 3 "" H 1950 1500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LTV-817 U1
+L he1_terminal-rescue:LTV-817 U1
 U 1 1 58E3F025
 P 1550 1650
 F 0 "U1" H 1350 1850 50  0000 L CNN
@@ -226,7 +197,7 @@ Wire Wire Line
 Wire Wire Line
 	1450 950  1450 850 
 $Comp
-L Q_NPN_CBE Q2
+L he1_terminal-rescue:Q_NPN_CBE Q2
 U 1 1 58E3FDD3
 P 2700 2150
 F 0 "Q2" H 2900 2200 50  0000 L CNN
@@ -237,7 +208,7 @@ F 3 "" H 2700 2150 50  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L +9V #PWR6
+L power:+9V #PWR6
 U 1 1 58E3FDD9
 P 2150 1950
 F 0 "#PWR6" H 2150 1800 50  0001 C CNN
@@ -248,7 +219,7 @@ F 3 "" H 2150 1950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R2
+L he1_terminal-rescue:R R2
 U 1 1 58E3FDDF
 P 2500 1100
 F 0 "R2" V 2580 1100 50  0000 C CNN
@@ -259,7 +230,7 @@ F 3 "" H 2500 1100 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR7
+L power:+5V #PWR7
 U 1 1 58E3FDE5
 P 2500 850
 F 0 "#PWR7" H 2500 700 50  0001 C CNN
@@ -270,7 +241,7 @@ F 3 "" H 2500 850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR9
+L power:GND #PWR9
 U 1 1 58E3FDEB
 P 3000 1500
 F 0 "#PWR9" H 3000 1250 50  0001 C CNN
@@ -281,7 +252,7 @@ F 3 "" H 3000 1500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LTV-817 U2
+L he1_terminal-rescue:LTV-817 U2
 U 1 1 58E3FDF1
 P 2600 1650
 F 0 "U2" H 2400 1850 50  0000 L CNN
@@ -308,7 +279,7 @@ Wire Wire Line
 Wire Wire Line
 	2500 950  2500 850 
 $Comp
-L Q_NPN_CBE Q3
+L he1_terminal-rescue:Q_NPN_CBE Q3
 U 1 1 58E400BF
 P 3750 2150
 F 0 "Q3" H 3950 2200 50  0000 L CNN
@@ -319,7 +290,7 @@ F 3 "" H 3750 2150 50  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L +9V #PWR10
+L power:+9V #PWR10
 U 1 1 58E400C5
 P 3200 1950
 F 0 "#PWR10" H 3200 1800 50  0001 C CNN
@@ -330,7 +301,7 @@ F 3 "" H 3200 1950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L he1_terminal-rescue:R R3
 U 1 1 58E400CB
 P 3550 1100
 F 0 "R3" V 3630 1100 50  0000 C CNN
@@ -341,7 +312,7 @@ F 3 "" H 3550 1100 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR11
+L power:+5V #PWR11
 U 1 1 58E400D1
 P 3550 850
 F 0 "#PWR11" H 3550 700 50  0001 C CNN
@@ -352,7 +323,7 @@ F 3 "" H 3550 850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR12
+L power:GND #PWR12
 U 1 1 58E400D7
 P 4050 1500
 F 0 "#PWR12" H 4050 1250 50  0001 C CNN
@@ -363,7 +334,7 @@ F 3 "" H 4050 1500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LTV-817 U3
+L he1_terminal-rescue:LTV-817 U3
 U 1 1 58E400DD
 P 3650 1650
 F 0 "U3" H 3450 1850 50  0000 L CNN
@@ -390,7 +361,7 @@ Wire Wire Line
 Wire Wire Line
 	3550 950  3550 850 
 $Comp
-L Q_NPN_CBE Q4
+L he1_terminal-rescue:Q_NPN_CBE Q4
 U 1 1 58E40487
 P 4800 2150
 F 0 "Q4" H 5000 2200 50  0000 L CNN
@@ -401,7 +372,7 @@ F 3 "" H 4800 2150 50  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L +9V #PWR13
+L power:+9V #PWR13
 U 1 1 58E4048D
 P 4250 1950
 F 0 "#PWR13" H 4250 1800 50  0001 C CNN
@@ -412,7 +383,7 @@ F 3 "" H 4250 1950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R4
+L he1_terminal-rescue:R R4
 U 1 1 58E40493
 P 4600 1100
 F 0 "R4" V 4680 1100 50  0000 C CNN
@@ -423,7 +394,7 @@ F 3 "" H 4600 1100 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR14
+L power:+5V #PWR14
 U 1 1 58E40499
 P 4600 850
 F 0 "#PWR14" H 4600 700 50  0001 C CNN
@@ -434,7 +405,7 @@ F 3 "" H 4600 850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR16
+L power:GND #PWR16
 U 1 1 58E4049F
 P 5100 1500
 F 0 "#PWR16" H 5100 1250 50  0001 C CNN
@@ -445,7 +416,7 @@ F 3 "" H 5100 1500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LTV-817 U4
+L he1_terminal-rescue:LTV-817 U4
 U 1 1 58E404A5
 P 4700 1650
 F 0 "U4" H 4500 1850 50  0000 L CNN
@@ -472,7 +443,7 @@ Wire Wire Line
 Wire Wire Line
 	4600 950  4600 850 
 $Comp
-L Q_NPN_CBE Q5
+L he1_terminal-rescue:Q_NPN_CBE Q5
 U 1 1 58E40F46
 P 5850 2150
 F 0 "Q5" H 6050 2200 50  0000 L CNN
@@ -483,7 +454,7 @@ F 3 "" H 5850 2150 50  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L +9V #PWR17
+L power:+9V #PWR17
 U 1 1 58E40F4C
 P 5300 1950
 F 0 "#PWR17" H 5300 1800 50  0001 C CNN
@@ -494,7 +465,7 @@ F 3 "" H 5300 1950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R5
+L he1_terminal-rescue:R R5
 U 1 1 58E40F52
 P 5650 1100
 F 0 "R5" V 5730 1100 50  0000 C CNN
@@ -505,7 +476,7 @@ F 3 "" H 5650 1100 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR18
+L power:+5V #PWR18
 U 1 1 58E40F58
 P 5650 850
 F 0 "#PWR18" H 5650 700 50  0001 C CNN
@@ -516,7 +487,7 @@ F 3 "" H 5650 850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR19
+L power:GND #PWR19
 U 1 1 58E40F5E
 P 6150 1500
 F 0 "#PWR19" H 6150 1250 50  0001 C CNN
@@ -527,7 +498,7 @@ F 3 "" H 6150 1500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LTV-817 U5
+L he1_terminal-rescue:LTV-817 U5
 U 1 1 58E40F64
 P 5750 1650
 F 0 "U5" H 5550 1850 50  0000 L CNN
@@ -554,7 +525,7 @@ Wire Wire Line
 Wire Wire Line
 	5650 950  5650 850 
 $Comp
-L Q_NPN_CBE Q6
+L he1_terminal-rescue:Q_NPN_CBE Q6
 U 1 1 58E4118F
 P 6900 2150
 F 0 "Q6" H 7100 2200 50  0000 L CNN
@@ -565,7 +536,7 @@ F 3 "" H 6900 2150 50  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L +9V #PWR20
+L power:+9V #PWR20
 U 1 1 58E41195
 P 6350 1950
 F 0 "#PWR20" H 6350 1800 50  0001 C CNN
@@ -576,7 +547,7 @@ F 3 "" H 6350 1950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R6
+L he1_terminal-rescue:R R6
 U 1 1 58E4119B
 P 6700 1100
 F 0 "R6" V 6780 1100 50  0000 C CNN
@@ -587,7 +558,7 @@ F 3 "" H 6700 1100 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR21
+L power:+5V #PWR21
 U 1 1 58E411A1
 P 6700 850
 F 0 "#PWR21" H 6700 700 50  0001 C CNN
@@ -598,7 +569,7 @@ F 3 "" H 6700 850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR22
+L power:GND #PWR22
 U 1 1 58E411A7
 P 7200 1500
 F 0 "#PWR22" H 7200 1250 50  0001 C CNN
@@ -609,7 +580,7 @@ F 3 "" H 7200 1500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LTV-817 U6
+L he1_terminal-rescue:LTV-817 U6
 U 1 1 58E411AD
 P 6800 1650
 F 0 "U6" H 6600 1850 50  0000 L CNN
@@ -636,7 +607,7 @@ Wire Wire Line
 Wire Wire Line
 	6700 950  6700 850 
 $Comp
-L Q_NPN_CBE Q7
+L he1_terminal-rescue:Q_NPN_CBE Q7
 U 1 1 58E4201E
 P 7950 2150
 F 0 "Q7" H 8150 2200 50  0000 L CNN
@@ -647,7 +618,7 @@ F 3 "" H 7950 2150 50  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L +9V #PWR23
+L power:+9V #PWR23
 U 1 1 58E42024
 P 7400 1950
 F 0 "#PWR23" H 7400 1800 50  0001 C CNN
@@ -658,7 +629,7 @@ F 3 "" H 7400 1950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R7
+L he1_terminal-rescue:R R7
 U 1 1 58E4202A
 P 7750 1100
 F 0 "R7" V 7830 1100 50  0000 C CNN
@@ -669,7 +640,7 @@ F 3 "" H 7750 1100 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR24
+L power:+5V #PWR24
 U 1 1 58E42030
 P 7750 850
 F 0 "#PWR24" H 7750 700 50  0001 C CNN
@@ -680,7 +651,7 @@ F 3 "" H 7750 850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR25
+L power:GND #PWR25
 U 1 1 58E42036
 P 8250 1500
 F 0 "#PWR25" H 8250 1250 50  0001 C CNN
@@ -691,7 +662,7 @@ F 3 "" H 8250 1500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LTV-817 U7
+L he1_terminal-rescue:LTV-817 U7
 U 1 1 58E4203C
 P 7850 1650
 F 0 "U7" H 7650 1850 50  0000 L CNN
@@ -718,7 +689,7 @@ Wire Wire Line
 Wire Wire Line
 	7750 950  7750 850 
 $Comp
-L Q_NPN_CBE Q8
+L he1_terminal-rescue:Q_NPN_CBE Q8
 U 1 1 58E4350E
 P 9000 2150
 F 0 "Q8" H 9200 2200 50  0000 L CNN
@@ -729,7 +700,7 @@ F 3 "" H 9000 2150 50  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L +9V #PWR26
+L power:+9V #PWR26
 U 1 1 58E43514
 P 8450 1950
 F 0 "#PWR26" H 8450 1800 50  0001 C CNN
@@ -740,7 +711,7 @@ F 3 "" H 8450 1950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R8
+L he1_terminal-rescue:R R8
 U 1 1 58E4351A
 P 8800 1100
 F 0 "R8" V 8880 1100 50  0000 C CNN
@@ -751,7 +722,7 @@ F 3 "" H 8800 1100 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR27
+L power:+5V #PWR27
 U 1 1 58E43520
 P 8800 850
 F 0 "#PWR27" H 8800 700 50  0001 C CNN
@@ -762,7 +733,7 @@ F 3 "" H 8800 850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR28
+L power:GND #PWR28
 U 1 1 58E43526
 P 9300 1500
 F 0 "#PWR28" H 9300 1250 50  0001 C CNN
@@ -773,7 +744,7 @@ F 3 "" H 9300 1500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LTV-817 U8
+L he1_terminal-rescue:LTV-817 U8
 U 1 1 58E4352C
 P 8900 1650
 F 0 "U8" H 8700 1850 50  0000 L CNN
@@ -800,7 +771,7 @@ Wire Wire Line
 Wire Wire Line
 	8800 950  8800 850 
 $Comp
-L Q_NPN_CBE Q9
+L he1_terminal-rescue:Q_NPN_CBE Q9
 U 1 1 58E43640
 P 10050 2150
 F 0 "Q9" H 10250 2200 50  0000 L CNN
@@ -811,7 +782,7 @@ F 3 "" H 10050 2150 50  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L +9V #PWR29
+L power:+9V #PWR29
 U 1 1 58E43646
 P 9500 1950
 F 0 "#PWR29" H 9500 1800 50  0001 C CNN
@@ -822,7 +793,7 @@ F 3 "" H 9500 1950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R9
+L he1_terminal-rescue:R R9
 U 1 1 58E4364C
 P 9850 1100
 F 0 "R9" V 9930 1100 50  0000 C CNN
@@ -833,7 +804,7 @@ F 3 "" H 9850 1100 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR30
+L power:+5V #PWR30
 U 1 1 58E43652
 P 9850 850
 F 0 "#PWR30" H 9850 700 50  0001 C CNN
@@ -844,7 +815,7 @@ F 3 "" H 9850 850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR31
+L power:GND #PWR31
 U 1 1 58E43658
 P 10350 1500
 F 0 "#PWR31" H 10350 1250 50  0001 C CNN
@@ -855,7 +826,7 @@ F 3 "" H 10350 1500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LTV-817 U9
+L he1_terminal-rescue:LTV-817 U9
 U 1 1 58E4365E
 P 9950 1650
 F 0 "U9" H 9750 1850 50  0000 L CNN
